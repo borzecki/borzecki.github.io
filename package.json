@@ -3,6 +3,7 @@
   "private": true,
   "description": "A minimal blog template built with Gatsby",
   "version": "0.1.0",
+  "homepage": "https://borzecki.github.io/",
   "author": "borzecki.daniel@gmail.com",
   "dependencies": {
     "@emotion/core": "^10.0.10",
@@ -41,7 +42,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b master -d public",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
