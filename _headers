@@ -28,7 +28,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
-/blog/chiang-mai-cowork
+/blog/quicksearch
   Link: </webpack-runtime-202eaa5b7ecc55db4ca3.js>; rel=preload; as=script
   Link: </styles-0d18d4be2c733776a30b.js>; rel=preload; as=script
   Link: </commons-a6a779a8ce88fe34f889.js>; rel=preload; as=script
@@ -36,7 +36,7 @@
   Link: </styles-0d18d4be2c733776a30b.js>; rel=preload; as=script
   Link: </commons-a6a779a8ce88fe34f889.js>; rel=preload; as=script
   Link: </component---src-templates-blog-post-js-5458f5cb96274ff016af.js>; rel=preload; as=script
-/blog/boomerang
+/blog/chiang-mai-cowork
   Link: </webpack-runtime-202eaa5b7ecc55db4ca3.js>; rel=preload; as=script
   Link: </styles-0d18d4be2c733776a30b.js>; rel=preload; as=script
   Link: </commons-a6a779a8ce88fe34f889.js>; rel=preload; as=script
@@ -52,7 +52,7 @@
   Link: </styles-0d18d4be2c733776a30b.js>; rel=preload; as=script
   Link: </commons-a6a779a8ce88fe34f889.js>; rel=preload; as=script
   Link: </component---src-templates-blog-post-js-5458f5cb96274ff016af.js>; rel=preload; as=script
-/blog/quicksearch
+/blog/boomerang
   Link: </webpack-runtime-202eaa5b7ecc55db4ca3.js>; rel=preload; as=script
   Link: </styles-0d18d4be2c733776a30b.js>; rel=preload; as=script
   Link: </commons-a6a779a8ce88fe34f889.js>; rel=preload; as=script
