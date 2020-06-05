@@ -18,6 +18,7 @@ const Content = styled.div`
   max-width: 860px;
   padding: 0 1.0875rem 1rem;
   padding-top: 0;
+  min-height: 80vh;
 `
 
 const GatsbyLink = styled.a`
@@ -45,12 +46,12 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
           <main>{children}</main>
-          <Footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
-          </Footer>
         </Content>
+        <Footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
+        </Footer>
       </>
     )}
   />

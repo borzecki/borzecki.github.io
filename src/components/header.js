@@ -35,7 +35,7 @@ const NavLink = styled(Link)`
   }
 `
 
-const GitHubLink = styled.a`
+const OutsideLink = styled.a`
   color: black;
   margin-left: 15px;
   text-decoration: none;
@@ -76,11 +76,12 @@ const Header = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
       <p>
-        <HomeLink to="/">{siteTitle}</HomeLink>
+        <HomeLink to="/">Home</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
-        <GitHubLink href="https://github.com/borzecki">
-          GitHub
-        </GitHubLink>
+        <OutsideLink href="https://github.com/borzecki">GitHub</OutsideLink>
+        <OutsideLink href="https://www.linkedin.com/in/borzeckid/">
+          LinkedIn
+        </OutsideLink>
       </p>
     </Content>
   </SiteHeader>

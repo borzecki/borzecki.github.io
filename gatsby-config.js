@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/borzecki.github.io",
   siteMetadata: {
     title: `Daniel Borzęcki`,
-    subtitle: `software developer`,
+    subtitle: `full-stack software engineer`,
     description: `A minimal blog starter built with Gatsbyjs. The needed Gatsby files are included.`,
     author: `@borzeckid`,
   },
@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-55747326-1",
-        head: true
+        head: true,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -76,7 +76,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

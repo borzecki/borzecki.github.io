@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 
+import profile from "../images/profile.jpg"
+
 const Container = styled.div`
   text-align: center;
 `
@@ -12,7 +14,7 @@ const OuterContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  height: 78vh;
+  height: 58vh;
 `
 
 const Description = styled.p`
@@ -24,6 +26,15 @@ const Description = styled.p`
 const NameHeader = styled.h1`
   font-size: 3.5rem;
   margin-bottom: 0;
+`
+
+const ProfilePicture = styled.div`
+  display: inline-block;
+  text-align: center;
+  width: 10rem;
+  img {
+    border-radius: 20rem;
+  }
 `
 
 const LandingBio = () => (
@@ -41,6 +52,9 @@ const LandingBio = () => (
     render={data => (
       <OuterContainer>
         <Container>
+          <ProfilePicture>
+            <img src={profile} alt="profile" />
+          </ProfilePicture>
           <NameHeader>{data.site.siteMetadata.title}</NameHeader>
           <Description>{data.site.siteMetadata.subtitle}</Description>
         </Container>
