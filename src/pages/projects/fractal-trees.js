@@ -1,7 +1,6 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect, useState, useLayoutEffect } from "react"
 import Layout from "../../components/layout"
 import RangeInput from "../../components/input/range"
-import useMedia from "./useMedia"
 
 const lengthReduction = 0.8
 const widthReduction = 0.8
@@ -62,27 +61,27 @@ const draw = (
 
 const FractalTrees = () => {
   const canvas = useRef()
-  const scale = useMedia(
-    ["(min-width: 1500px)", "(min-width: 1000px)", "(min-width: 300px)"],
-    [1, 0.5, 0.5],
-    1
-  )
+  const [scale, setScale] = useState(1)
 
-  const baseWidth = 8 * scale
+  const baseWidth = 8
   const [width, height] = [900 * scale, 670 * scale]
-  const [length, setLength] = useState(120)
+  const [length, setLength] = useState(120 * scale)
   const [angle, setAngle] = useState(5)
   const [segments, setSegments] = useState(12)
   const [jitter, setJitter] = useState(10)
 
   const redraw = () => {
     const ctx = canvas.current.getContext("2d")
+    canvas.current.style.width = "100%"
+    canvas.current.style.height = "100%"
+    canvas.current.width = width
+    canvas.current.height = height
     ctx.clearRect(0, 0, canvas.current.width, canvas.current.height)
     draw(
       ctx,
       true,
       width / 2,
-      height - 70,
+      height - 70 * scale,
       length,
       segments,
       angle,
@@ -91,13 +90,22 @@ const FractalTrees = () => {
     )
   }
 
-  useEffect(redraw, [length, angle, jitter, segments])
+  useLayoutEffect(() => {
+    if (typeof window === "undefined") return
+    const handleResize = () => setScale(window.outerWidth > 500 ? 1 : 0.4)
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  })
+
+  useEffect(redraw, [length, angle, jitter, segments, scale])
 
   return (
     <Layout className="noselect">
       <h1>Fractal Trees</h1>
 
-      <canvas onClick={redraw} ref={canvas} width={width} height={height} />
+      <canvas onClick={redraw} ref={canvas} />
       <br />
 
       <RangeInput
