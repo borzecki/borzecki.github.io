@@ -1,73 +1,26 @@
 import React, { useRef, useEffect, useState, useLayoutEffect } from "react"
+
 import Layout from "../../components/layout"
 import RangeInput from "../../components/input/range"
+import SEO from "../../components/seo"
 
-const lengthReduction = 0.8
-const widthReduction = 0.8
+import recurrentFractal from "../../utils/fractals"
 
-const draw = (
-  ctx,
-  first,
-  startX,
-  startY,
-  len,
-  segments,
-  angle,
-  jitter,
-  branchWidth
-) => {
-  ctx.beginPath()
-  ctx.save()
-
-  ctx.translate(startX, startY)
-  ctx.rotate(
-    first ? 0 : (angle * Math.ceil(Math.random() * jitter) * Math.PI) / 180
-  )
-  ctx.lineWidth = branchWidth
-  ctx.moveTo(0, 0)
-  ctx.lineTo(0, -len)
-  ctx.stroke()
-
-  if (segments === 0) {
-    ctx.restore()
-    return
-  }
-
-  draw(
-    ctx,
-    false,
-    0,
-    -len,
-    len * lengthReduction,
-    segments - 1,
-    -angle,
-    jitter,
-    branchWidth * widthReduction
-  )
-  draw(
-    ctx,
-    false,
-    0,
-    -len,
-    len * lengthReduction,
-    segments - 1,
-    angle,
-    jitter,
-    branchWidth * widthReduction
-  )
-
-  ctx.restore()
-}
+// base width of tree
+const baseWidth = 8
 
 const FractalTrees = () => {
   const canvas = useRef()
   const [scale, setScale] = useState(1)
 
-  const baseWidth = 8
   const [width, height] = [900 * scale, 670 * scale]
+  // initial length
   const [length, setLength] = useState(120 * scale)
+  // constant angle factor
   const [angle, setAngle] = useState(5)
-  const [segments, setSegments] = useState(12)
+  // number of recurrent steps
+  const [segments, setSegments] = useState(14)
+  // randomness factor
   const [jitter, setJitter] = useState(10)
 
   const redraw = () => {
@@ -77,7 +30,7 @@ const FractalTrees = () => {
     canvas.current.width = width
     canvas.current.height = height
     ctx.clearRect(0, 0, canvas.current.width, canvas.current.height)
-    draw(
+    recurrentFractal(
       ctx,
       true,
       width / 2,
@@ -90,6 +43,7 @@ const FractalTrees = () => {
     )
   }
 
+  // make sure canvas is resized on mobile
   useLayoutEffect(() => {
     if (typeof window === "undefined") return
     const handleResize = () => setScale(window.outerWidth > 500 ? 1 : 0.4)
@@ -103,6 +57,17 @@ const FractalTrees = () => {
 
   return (
     <Layout className="noselect">
+      <SEO
+        title="Fractal Trees"
+        keywords={[
+          `borzeckid`,
+          `freelance`,
+          `fractals`,
+          `procedurally generated`,
+          `react`,
+          `redux`,
+        ]}
+      />
       <h1>Fractal Trees</h1>
 
       <canvas onClick={redraw} ref={canvas} />
