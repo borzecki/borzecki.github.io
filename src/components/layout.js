@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
@@ -30,7 +23,7 @@ const Footer = styled.footer`
   justify-content: center;
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ className, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -42,7 +35,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div className={className}>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
           <main>{children}</main>
@@ -52,7 +45,7 @@ const Layout = ({ children }) => (
           {` `}
           <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
         </Footer>
-      </>
+      </div>
     )}
   />
 )
