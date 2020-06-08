@@ -13,17 +13,26 @@ import SEO from "../../components/seo"
 import drawFractal from "../../utils/fractals"
 import useInterval from "../../hooks/useInterval"
 
-const Button = styled.span`
-  border: 1px black solid;
-  border-radius: 10px;
+const Button = styled.button`
+  cursor: pointer;
+  background: transparent;
+  user-select: none;
+  transition: all 0.3s;
+
+  border: 1px solid transparent;
+  border-color: black;
+  border-radius: 50%;
+
   margin: 0 5px;
-  span {
-    margin: 10px;
-  }
+  min-width: 32px;
+  text-align: center;
+  padding: 2.4px 0;
+  font-size: 16px;
+
   @media (hover: hover) and (pointer: fine) {
     :hover {
-      color: rgba(0, 0, 0, 0.5);
-      border-color: rgba(0, 0, 0, 0.5);
+      color: #d9d9d9;
+      border-color: #d9d9d9;
     }
   }
 `
