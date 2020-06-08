@@ -1,10 +1,37 @@
 import React, { useRef, useEffect, useState } from "react"
+import {
+  SwapOutlined,
+  CaretRightOutlined,
+  PauseOutlined,
+} from "@ant-design/icons"
 
+import styled from "@emotion/styled"
 import Layout from "../../components/layout"
 import RangeInput from "../../components/input/range"
 import SEO from "../../components/seo"
 
 import drawFractal from "../../utils/fractals"
+import useInterval from "../../hooks/useInterval"
+
+const Button = styled.span`
+  border: 1px black solid;
+  border-radius: 10px;
+  margin: 0 5px;
+  span {
+    margin: 10px;
+  }
+  :hover {
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+  }
+`
+
+// random int in range [min, max]
+function getRandomInt(min, max) {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
 
 // base width of tree
 const baseWidth = 8
@@ -13,6 +40,7 @@ const FractalTrees = () => {
   const canvas = useRef()
 
   const [width, height] = [900, 670]
+
   // initial length
   const [length, setLength] = useState(120)
   // constant angle factor
@@ -21,6 +49,8 @@ const FractalTrees = () => {
   const [segments, setSegments] = useState(14)
   // randomness factor
   const [jitter, setJitter] = useState(10)
+  // animation control
+  const [play, setPlay] = useState(false)
 
   const redraw = () => {
     const ctx = canvas.current.getContext("2d")
@@ -40,6 +70,15 @@ const FractalTrees = () => {
     )
   }
 
+  const randomize = () => {
+    setLength(getRandomInt(100, 120))
+    setSegments(getRandomInt(5, 15))
+    const newAngle = getRandomInt(5, 50)
+    setAngle(newAngle)
+    setJitter(getRandomInt(1, newAngle > 10 ? 2 : 10))
+  }
+
+  useInterval(redraw, play ? 500 : null)
   useEffect(redraw, [length, angle, jitter, segments])
 
   return (
@@ -50,16 +89,23 @@ const FractalTrees = () => {
           `borzeckid`,
           `freelance`,
           `fractals`,
-          `procedurally generated`,
+          `procedural generation`,
           `react`,
-          `redux`,
         ]}
       />
       <h1>Fractal Trees</h1>
 
+      <Button shape="circle" onClick={() => setPlay(!play)}>
+        {play ? <PauseOutlined /> : <CaretRightOutlined />}
+      </Button>
+      <Button onClick={() => randomize()} shape="circle">
+        <SwapOutlined />
+      </Button>
+      <br />
       <canvas onClick={redraw} ref={canvas} width={width} height={height} />
       <br />
-
+      <br />
+      <br />
       <RangeInput
         label="length"
         min={40}
