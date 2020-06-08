@@ -20,9 +20,11 @@ const Button = styled.span`
   span {
     margin: 10px;
   }
-  :hover {
-    color: rgba(0, 0, 0, 0.5);
-    border-color: rgba(0, 0, 0, 0.5);
+  @media (hover: hover) and (pointer: fine) {
+    :hover {
+      color: rgba(0, 0, 0, 0.5);
+      border-color: rgba(0, 0, 0, 0.5);
+    }
   }
 `
 
