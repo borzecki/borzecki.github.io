@@ -1,21 +1,20 @@
-import React, { useRef, useEffect, useState, useLayoutEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 
 import Layout from "../../components/layout"
 import RangeInput from "../../components/input/range"
 import SEO from "../../components/seo"
 
-import recurrentFractal from "../../utils/fractals"
+import drawFractal from "../../utils/fractals"
 
 // base width of tree
 const baseWidth = 8
 
 const FractalTrees = () => {
   const canvas = useRef()
-  const [scale, setScale] = useState(1)
 
-  const [width, height] = [900 * scale, 670 * scale]
+  const [width, height] = [900, 670]
   // initial length
-  const [length, setLength] = useState(120 * scale)
+  const [length, setLength] = useState(120)
   // constant angle factor
   const [angle, setAngle] = useState(5)
   // number of recurrent steps
@@ -27,14 +26,12 @@ const FractalTrees = () => {
     const ctx = canvas.current.getContext("2d")
     canvas.current.style.width = "100%"
     canvas.current.style.height = "100%"
-    canvas.current.width = width
-    canvas.current.height = height
     ctx.clearRect(0, 0, canvas.current.width, canvas.current.height)
-    recurrentFractal(
+    drawFractal(
       ctx,
       true,
       width / 2,
-      height - 70 * scale,
+      height - 70,
       length,
       segments,
       angle,
@@ -43,17 +40,7 @@ const FractalTrees = () => {
     )
   }
 
-  // make sure canvas is resized on mobile
-  useLayoutEffect(() => {
-    if (typeof window === "undefined") return
-    const handleResize = () => setScale(window.outerWidth > 500 ? 1 : 0.4)
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  })
-
-  useEffect(redraw, [length, angle, jitter, segments, scale])
+  useEffect(redraw, [length, angle, jitter, segments])
 
   return (
     <Layout className="noselect">
@@ -70,14 +57,14 @@ const FractalTrees = () => {
       />
       <h1>Fractal Trees</h1>
 
-      <canvas onClick={redraw} ref={canvas} />
+      <canvas onClick={redraw} ref={canvas} width={width} height={height} />
       <br />
 
       <RangeInput
         label="length"
-        min={40 * scale}
-        max={120 * scale}
-        step={10 * scale}
+        min={40}
+        max={120}
+        step={10}
         value={length}
         onChange={setLength}
       />

@@ -1,7 +1,7 @@
 export const lengthReduction = 0.8
 export const widthReduction = 0.8
 
-const recurrentFractal = (
+const drawFractal = (
   ctx,
   first,
   startX,
@@ -29,7 +29,7 @@ const recurrentFractal = (
     return
   }
 
-  recurrentFractal(
+  drawFractal(
     ctx,
     false,
     0,
@@ -40,7 +40,7 @@ const recurrentFractal = (
     jitter,
     branchWidth * widthReduction
   )
-  recurrentFractal(
+  drawFractal(
     ctx,
     false,
     0,
@@ -55,4 +55,4 @@ const recurrentFractal = (
   ctx.restore()
 }
 
-export default recurrentFractal
+export default drawFractal
