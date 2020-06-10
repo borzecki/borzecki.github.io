@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
+  <a href="http://borzeckid.com">
     <img alt="Gatsby" src="https://github.com/borzecki/borzecki.github.io/blob/gatsby/src/images/icon.png?raw=true" width="60" />
   </a>
 </p>
