@@ -23,17 +23,17 @@
   Cache-Control: public, max-age=31536000, immutable
 /framework-4cc9a053c6a82eddd6fb.js
   Cache-Control: public, max-age=31536000, immutable
-/app-e8defaeffaeb4ab33b06.js
+/app-ee0f7304fddd4da5fa9b.js
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
-/blog/chiang-mai-cowork/
 /blog/boomerang/
+/blog/chiang-mai-cowork/
+/blog/jest-event-emitters/
 /blog/quicksearch/
 /blog/django-querysets/
-/blog/jest-event-emitters/
 /404/
 /404.html
 /blog/
