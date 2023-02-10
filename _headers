@@ -17,9 +17,9 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-index-js-d09855c00201f1f4aac4.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-projects-fractal-trees-js-57835743381201a67345.js
+/component---src-pages-projects-fractal-trees-js-78f969c140e2125b5682.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-d693399557cc0f5bb360.js
+/webpack-runtime-cb37b622118bd639c7b0.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-4cc9a053c6a82eddd6fb.js
   Cache-Control: public, max-age=31536000, immutable
@@ -29,10 +29,10 @@
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
+/blog/chiang-mai-cowork/
 /blog/boomerang/
 /blog/quicksearch/
 /blog/django-querysets/
-/blog/chiang-mai-cowork/
 /blog/jest-event-emitters/
 /404/
 /404.html
