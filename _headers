@@ -5,108 +5,37 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Referrer-Policy: same-origin
-  Strict-Transport-Security: max-age=63072000
-/styles.7ac35ef3d837dec6bdd4.css
+/styles.d6f55856df41c2c02e4c.css
   Cache-Control: public, max-age=31536000, immutable
-/styles-53408bdffa6ae4b0c611.js
+/commons-f59b43bc2dea9ecb28a6.js
   Cache-Control: public, max-age=31536000, immutable
-/commons-2a91c9a029507f8ff762.js
+/component---src-templates-blog-post-js-46ff078f30165e547061.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-templates-blog-post-js-e4870ed27565dbd726eb.js
+/component---src-pages-404-js-48598e11278ed9ef0500.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-404-js-5232ce4319552e7b6a16.js
+/component---src-pages-blog-js-ae8ec085943f80af9087.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-blog-js-d8067216d3f88bc31615.js
+/component---src-pages-index-js-d09855c00201f1f4aac4.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-index-js-b0b309fbcb76d9660627.js
+/component---src-pages-projects-fractal-trees-js-57835743381201a67345.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-projects-fractal-trees-js-f252b93242273c614bc8.js
+/webpack-runtime-d693399557cc0f5bb360.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-6d08194426db086f7f84.js
+/framework-4cc9a053c6a82eddd6fb.js
   Cache-Control: public, max-age=31536000, immutable
-/app-7fbc9e64213b8b5c3aa0.js
+/app-e8defaeffaeb4ab33b06.js
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable
 /sw.js
   Cache-Control: no-cache
-/blog/quicksearch
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-e4870ed27565dbd726eb.js>; rel=preload; as=script
-/blog/boomerang
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-e4870ed27565dbd726eb.js>; rel=preload; as=script
-/blog/django-querysets
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-e4870ed27565dbd726eb.js>; rel=preload; as=script
-/blog/chiang-mai-cowork
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-e4870ed27565dbd726eb.js>; rel=preload; as=script
-/blog/jest-event-emitters
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-e4870ed27565dbd726eb.js>; rel=preload; as=script
+/blog/boomerang/
+/blog/quicksearch/
+/blog/django-querysets/
+/blog/chiang-mai-cowork/
+/blog/jest-event-emitters/
 /404/
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-pages-404-js-5232ce4319552e7b6a16.js>; rel=preload; as=script
-/blog/
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-pages-blog-js-d8067216d3f88bc31615.js>; rel=preload; as=script
-/
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-pages-index-js-b0b309fbcb76d9660627.js>; rel=preload; as=script
-/projects/fractal-trees/
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-pages-projects-fractal-trees-js-f252b93242273c614bc8.js>; rel=preload; as=script
 /404.html
-  Link: </webpack-runtime-6d08194426db086f7f84.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </app-7fbc9e64213b8b5c3aa0.js>; rel=preload; as=script
-  Link: </styles-53408bdffa6ae4b0c611.js>; rel=preload; as=script
-  Link: </commons-2a91c9a029507f8ff762.js>; rel=preload; as=script
-  Link: </component---src-pages-404-js-5232ce4319552e7b6a16.js>; rel=preload; as=script
+/blog/
+/
+/projects/fractal-trees/
