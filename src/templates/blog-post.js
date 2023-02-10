@@ -56,9 +56,7 @@ export default ({ data }) => {
       />
       <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-        <HeaderDate>
-          {post.frontmatter.date} - {post.fields.readingTime.text}
-        </HeaderDate>
+        <HeaderDate>{post.frontmatter.date}</HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
     </Layout>
@@ -74,11 +72,6 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         path
         title
-      }
-      fields {
-        readingTime {
-          text
-        }
       }
     }
   }
