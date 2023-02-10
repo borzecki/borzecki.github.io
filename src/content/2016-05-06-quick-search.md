@@ -2,7 +2,7 @@
 title: "Quick search (q)"
 date: "2016-06-06"
 draft: false
-path: "/blog/quicksearch"
+path: "/blog/quicksearch/"
 ---
 
 # quicksearch

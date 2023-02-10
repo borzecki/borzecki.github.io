@@ -2,7 +2,7 @@
 title: "Coworking in Chiang Mai"
 date: "2017-03-16"
 draft: false
-path: "/blog/chiang-mai-cowork"
+path: "/blog/chiang-mai-cowork/"
 ---
 
 ## Intro

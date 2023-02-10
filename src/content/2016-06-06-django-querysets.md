@@ -2,7 +2,7 @@
 title: "Django querysets"
 date: "2016-06-06"
 draft: false
-path: "/blog/django-querysets"
+path: "/blog/django-querysets/"
 ---
 
 # Comparing queryset

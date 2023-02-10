@@ -1,8 +1,8 @@
 ---
-title:  "Boomerang"
+title: "Boomerang"
 date: "2016-04-29"
 draft: false
-path: "/blog/boomerang"
+path: "/blog/boomerang/"
 ---
 # boomerang
 

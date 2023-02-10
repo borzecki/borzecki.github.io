@@ -2,7 +2,7 @@
 title: "Testing event emitters with Jest"
 date: "2020-06-08"
 draft: false
-path: "/blog/jest-event-emitters"
+path: "/blog/jest-event-emitters/"
 ---
 
 Writing unit tests for code that relies on third party libraries can sometimes be tricky. We're all familiar with [module mocking](https://jestjs.io/docs/en/manual-mocks), but what if code that we want to cover is triggered by external events? Today we'll be improving test coverage in these cases. To make our lives easier, let's call our module `analytics` and assume it exposes the following methods:
