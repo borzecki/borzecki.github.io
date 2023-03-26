@@ -9,7 +9,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /commons-f59b43bc2dea9ecb28a6.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-templates-blog-post-js-46ff078f30165e547061.js
+/component---src-templates-blog-post-js-a5435ff0bf71dd780866.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-404-js-48598e11278ed9ef0500.js
   Cache-Control: public, max-age=31536000, immutable
@@ -19,7 +19,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-projects-fractal-trees-js-78f969c140e2125b5682.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-cb37b622118bd639c7b0.js
+/webpack-runtime-c72033aefac2e3791203.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-4cc9a053c6a82eddd6fb.js
   Cache-Control: public, max-age=31536000, immutable
@@ -30,10 +30,11 @@
 /sw.js
   Cache-Control: no-cache
 /blog/boomerang/
-/blog/chiang-mai-cowork/
-/blog/jest-event-emitters/
 /blog/quicksearch/
 /blog/django-querysets/
+/blog/chiang-mai-cowork/
+/blog/react-accessibility/
+/blog/jest-event-emitters/
 /404/
 /404.html
 /blog/
