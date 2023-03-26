@@ -21,7 +21,7 @@ const MarkedHeader = styled.h1`
   );
 `
 
-const HeaderDate = styled.h3`
+const HeaderDate = styled.h4`
   margin-top: 10px;
   color: #606060;
 `
@@ -56,7 +56,10 @@ export default ({ data }) => {
       />
       <Content>
         <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-        <HeaderDate>{post.frontmatter.date}</HeaderDate>
+        <HeaderDate>
+          {post.frontmatter.date} | ⏳ {post.fields.readingTime.text}
+        </HeaderDate>
+
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
     </Layout>
@@ -64,7 +67,7 @@ export default ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt(pruneLength: 160)
@@ -72,6 +75,11 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM, YYYY")
         path
         title
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }
